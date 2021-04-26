@@ -77,7 +77,7 @@ void ReadClient::MoveToState(const ClientState aTargetState)
                   GetStateStr());
 }
 
-CHIP_ERROR ReadClient::SendReadRequest(NodeId aNodeId, Transport::AdminId aAdminId, EventPathParams * apEventPathParamsList,
+CHIP_ERROR ReadClient::SendReadRequest(NodeId aNodeId, AdminId aAdminId, EventPathParams * apEventPathParamsList,
                                        size_t aEventPathParamsListSize)
 {
     CHIP_ERROR err = CHIP_NO_ERROR;

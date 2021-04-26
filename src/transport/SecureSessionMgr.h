@@ -49,13 +49,13 @@ class SecureSessionHandle
 {
 public:
     SecureSessionHandle() : mPeerNodeId(kAnyNodeId), mPeerKeyId(0), mAdmin(Transport::kUndefinedAdminId) {}
-    SecureSessionHandle(NodeId peerNodeId, uint16_t peerKeyId, Transport::AdminId admin) :
+    SecureSessionHandle(NodeId peerNodeId, uint16_t peerKeyId, AdminId admin) :
         mPeerNodeId(peerNodeId), mPeerKeyId(peerKeyId), mAdmin(admin)
     {}
 
     bool HasAdminId() const { return (mAdmin != Transport::kUndefinedAdminId); }
-    Transport::AdminId GetAdminId() const { return mAdmin; }
-    void SetAdminId(Transport::AdminId adminId) { mAdmin = adminId; }
+    AdminId GetAdminId() const { return mAdmin; }
+    void SetAdminId(AdminId adminId) { mAdmin = adminId; }
 
     bool operator==(const SecureSessionHandle & that) const
     {
@@ -73,7 +73,7 @@ private:
     //       The Admin ID will not be available for PASE and group sessions. So need
     //       to identify an approach that'll allow looking up the corresponding information for
     //       such sessions.
-    Transport::AdminId mAdmin;
+    AdminId mAdmin;
 };
 
 /**
@@ -255,7 +255,7 @@ public:
      *   peer node.
      */
     CHIP_ERROR NewPairing(const Optional<Transport::PeerAddress> & peerAddr, NodeId peerNodeId, PairingSession * pairing,
-                          PairingDirection direction, Transport::AdminId admin, Transport::Base * transport = nullptr);
+                          PairingDirection direction, AdminId admin, Transport::Base * transport = nullptr);
 
     /**
      * @brief

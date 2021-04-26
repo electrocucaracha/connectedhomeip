@@ -207,7 +207,7 @@ public:
     ReliableMessageMgr * GetReliableMessageMgr() { return &mReliableMessageMgr; };
 
     MessageCounterSyncMgr * GetMessageCounterSyncMgr() { return &mMessageCounterSyncMgr; };
-    Transport::AdminId GetAdminId() { return mAdminId; }
+    AdminId GetAdminId() { return mAdminId; }
 
     uint16_t GetNextKeyId() { return ++mNextKeyId; }
     size_t GetContextsInUse() const { return mContextsInUse; }
@@ -249,7 +249,7 @@ private:
     ReliableMessageMgr mReliableMessageMgr;
     MessageCounterSyncMgr mMessageCounterSyncMgr;
 
-    Transport::AdminId mAdminId = 0;
+    AdminId mAdminId = 0;
 
     std::array<ExchangeContext, CHIP_CONFIG_MAX_EXCHANGE_CONTEXTS> mContextPool;
     size_t mContextsInUse;

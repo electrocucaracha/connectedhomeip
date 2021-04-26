@@ -21,7 +21,7 @@
 
 namespace chip {
 
-StorablePeerConnection::StorablePeerConnection(PASESession & session, Transport::AdminId admin)
+StorablePeerConnection::StorablePeerConnection(PASESession & session, AdminId admin)
 {
     session.ToSerializable(mSession.mOpCreds);
     mSession.mAdmin = Encoding::LittleEndian::HostSwap16(admin);

@@ -154,7 +154,7 @@ public:
      * @param[in] listenPort   Port on which controller is listening (typically CHIP_PORT)
      * @param[in] admin        Local administrator that's initializing this device object
      */
-    void Init(ControllerDeviceInitParams params, uint16_t listenPort, Transport::AdminId admin)
+    void Init(ControllerDeviceInitParams params, uint16_t listenPort, AdminId admin)
     {
         mTransportMgr   = params.transportMgr;
         mSessionManager = params.sessionMgr;
@@ -189,7 +189,7 @@ public:
      * @param[in] admin        Local administrator that's initializing this device object
      */
     void Init(ControllerDeviceInitParams params, uint16_t listenPort, NodeId deviceId, const Transport::PeerAddress & peerAddress,
-              Transport::AdminId admin)
+              AdminId admin)
     {
         Init(params, mListenPort, admin);
         mDeviceId = deviceId;
@@ -385,7 +385,7 @@ private:
 
     uint16_t mListenPort;
 
-    Transport::AdminId mAdminId = Transport::kUndefinedAdminId;
+    AdminId mAdminId = Transport::kUndefinedAdminId;
 };
 
 /**

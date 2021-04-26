@@ -66,7 +66,7 @@ int main(int argc, char * argv[])
     chip::Transport::AdminPairingTable admins;
     chip::Transport::AdminPairingInfo * adminInfo = nullptr;
 
-    const chip::Transport::AdminId gAdminId = 0;
+    const chip::AdminId gAdminId = 0;
 
     if (argc > 2)
     {

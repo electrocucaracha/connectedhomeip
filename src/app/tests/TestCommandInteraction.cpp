@@ -46,7 +46,7 @@ static System::Layer gSystemLayer;
 static SecureSessionMgr gSessionManager;
 static Messaging::ExchangeManager gExchangeManager;
 static TransportMgr<Transport::UDP> gTransportManager;
-static Transport::AdminId gAdminId = 0;
+static AdminId gAdminId = 0;
 
 namespace app {
 class TestCommandInteraction

@@ -47,7 +47,7 @@ static System::Layer gSystemLayer;
 static SecureSessionMgr gSessionManager;
 static Messaging::ExchangeManager gExchangeManager;
 static TransportMgr<Transport::UDP> gTransportManager;
-static const Transport::AdminId gAdminId = 0;
+static const AdminId gAdminId = 0;
 
 namespace app {
 namespace reporting {

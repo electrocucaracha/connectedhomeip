@@ -45,7 +45,7 @@ namespace app {
 class CommandSender : public Command, public Messaging::ExchangeDelegate
 {
 public:
-    CHIP_ERROR SendCommandRequest(NodeId aNodeId, Transport::AdminId aAdminId);
+    CHIP_ERROR SendCommandRequest(NodeId aNodeId, AdminId aAdminId);
 
     void OnMessageReceived(Messaging::ExchangeContext * apExchangeContext, const PacketHeader & aPacketHeader,
                            const PayloadHeader & aPayloadHeader, System::PacketBufferHandle aPayload) override;

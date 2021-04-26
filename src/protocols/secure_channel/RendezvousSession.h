@@ -125,7 +125,7 @@ public:
      */
     const Inet::IPAddress & GetIPAddress() const { return mNetworkProvision.GetIPAddress(); }
 
-    Transport::AdminId GetAdminId() const { return (mAdmin != nullptr) ? mAdmin->GetAdminId() : Transport::kUndefinedAdminId; }
+    AdminId GetAdminId() const { return (mAdmin != nullptr) ? mAdmin->GetAdminId() : Transport::kUndefinedAdminId; }
 
     uint16_t GetNextKeyId() const { return mNextKeyId; }
     void SetNextKeyId(uint16_t id) { mNextKeyId = id; }

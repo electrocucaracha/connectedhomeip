@@ -47,7 +47,7 @@ namespace {
 constexpr size_t kMaxCommandMessageCount    = 3;
 constexpr size_t kMaxReadMessageCount       = 3;
 constexpr int32_t gMessageIntervalSeconds   = 1;
-constexpr chip::Transport::AdminId gAdminId = 0;
+constexpr chip::AdminId gAdminId = 0;
 
 // The CommandSender object.
 chip::app::CommandSender * gpCommandSender = nullptr;

@@ -46,7 +46,7 @@ System::Layer gSystemLayer;
 SecureSessionMgr gSessionManager;
 Messaging::ExchangeManager gExchangeManager;
 TransportMgr<Transport::UDP> gTransportManager;
-const Transport::AdminId gAdminId = 0;
+const AdminId gAdminId = 0;
 
 namespace app {
 class TestReadInteraction

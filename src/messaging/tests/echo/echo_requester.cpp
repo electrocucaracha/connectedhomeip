@@ -53,7 +53,7 @@ constexpr size_t kMaxEchoCount = 3;
 // The CHIP Echo interval time in milliseconds.
 constexpr int32_t gEchoInterval = 1000;
 
-constexpr chip::Transport::AdminId gAdminId = 0;
+constexpr chip::AdminId gAdminId = 0;
 
 // The EchoClient object.
 chip::Protocols::Echo::EchoClient gEchoClient;

@@ -34,7 +34,7 @@ using GeneralStatusCode = chip::Protocols::SecureChannel::GeneralStatusCode;
 namespace chip {
 namespace app {
 
-CHIP_ERROR CommandSender::SendCommandRequest(NodeId aNodeId, Transport::AdminId aAdminId)
+CHIP_ERROR CommandSender::SendCommandRequest(NodeId aNodeId, AdminId aAdminId)
 {
     CHIP_ERROR err = CHIP_NO_ERROR;
 

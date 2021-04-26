@@ -85,8 +85,8 @@ public:
     SecureSession & GetSenderSecureSession() { return mSenderSecureSession; }
     SecureSession & GetReceiverSecureSession() { return mReceiverSecureSession; }
 
-    Transport::AdminId GetAdminId() const { return mAdmin; }
-    void SetAdminId(Transport::AdminId admin) { mAdmin = admin; }
+    AdminId GetAdminId() const { return mAdmin; }
+    void SetAdminId(AdminId admin) { mAdmin = admin; }
 
     void SetMsgCounterSyncInProgress(bool value)
     {
@@ -145,7 +145,7 @@ private:
     Transport::Base * mTransport = nullptr;
     SecureSession mSenderSecureSession;
     SecureSession mReceiverSecureSession;
-    Transport::AdminId mAdmin = kUndefinedAdminId;
+    AdminId mAdmin = kUndefinedAdminId;
 };
 
 } // namespace Transport

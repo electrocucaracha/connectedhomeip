@@ -131,7 +131,7 @@ private:
     bool mUsingCRMP;
 } gPingArguments;
 
-constexpr Transport::AdminId gAdminId = 0;
+constexpr AdminId gAdminId = 0;
 
 Protocols::Echo::EchoClient gEchoClient;
 

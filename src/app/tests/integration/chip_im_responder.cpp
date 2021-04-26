@@ -114,7 +114,7 @@ int main(int argc, char * argv[])
     CHIP_ERROR err = CHIP_NO_ERROR;
     chip::app::InteractionModelDelegate mockDelegate;
     chip::Optional<chip::Transport::PeerAddress> peer(chip::Transport::Type::kUndefined);
-    const chip::Transport::AdminId gAdminId = 0;
+    const chip::AdminId gAdminId = 0;
     chip::Transport::AdminPairingTable admins;
     chip::Transport::AdminPairingInfo * adminInfo = admins.AssignAdminId(gAdminId, chip::kTestDeviceNodeId);
 

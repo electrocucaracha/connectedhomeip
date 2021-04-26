@@ -260,7 +260,7 @@ protected:
     CHIP_ERROR SetPairedDeviceList(const char * pairedDeviceSerializedSet);
     ControllerDeviceInitParams GetControllerDeviceInitParams();
 
-    Transport::AdminId mAdminId = 0;
+    AdminId mAdminId = 0;
     Transport::AdminPairingTable mAdmins;
 
 private:
