@@ -21,15 +21,15 @@
 
 #pragma once
 
+#include <app/util/basic-types.h>
 #include <core/CHIPPersistentStorageDelegate.h>
 #include <support/DLLUtil.h>
 #include <transport/raw/MessageHeader.h>
-#include <app/util/basic-types.h>
 
 namespace chip {
 namespace Transport {
 
-static constexpr AdminId kUndefinedAdminId   = UINT16_MAX;
+static constexpr AdminId kUndefinedAdminId = UINT16_MAX;
 // KVS store is sensitive to length of key strings, based on the underlying
 // platform. Keeping them short.
 constexpr char kAdminTableKeyPrefix[] = "CHIPAdmin";
@@ -53,18 +53,18 @@ class DLL_EXPORT AdminPairingTableDelegate
 public:
     virtual ~AdminPairingTableDelegate() {}
     /**
-    * Gets called when an admin is deleted from KVS store.
-    **/
+     * Gets called when an admin is deleted from KVS store.
+     **/
     virtual void OnAdminDeletedFromStorage(AdminId adminId) = 0;
 
     /**
-    * Gets called when an admin is loaded into Admin Pairing Table from KVS store.
-    **/
+     * Gets called when an admin is loaded into Admin Pairing Table from KVS store.
+     **/
     virtual void OnAdminRetrievedFromStorage(AdminId adminId, FabricId fabricId, NodeId nodeId) = 0;
 
     /**
-    * Gets called when an admin in Admin Pairing Table is persisted to KVS store.
-    **/
+     * Gets called when an admin in Admin Pairing Table is persisted to KVS store.
+     **/
     virtual void OnAdminPersistedToStorage(AdminId adminId, FabricId fabricId, NodeId nodeId) = 0;
 };
 
