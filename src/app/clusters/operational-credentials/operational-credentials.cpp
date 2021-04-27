@@ -44,7 +44,7 @@ using namespace ::chip::Transport;
 * Temporary flow for fabric management until addOptCert + fabric index are implemented:
 * 1) When Commissioner pairs with CHIP device, store device nodeId in Admin Pairing table as NodeId 
 *    and store commissioner nodeId in Admin Pairing table as FabricId (This is temporary until AddOptCert is implemented and Fabrics are implemented correctely)
-* 2) When pairing is complete, commissioner calls SetFabric to set the vendorId on the newly created fabric. The corresponding fabric is found by lookin
+* 2) When pairing is complete, commissioner calls SetFabric to set the vendorId on the newly created fabric. The corresponding fabric is found by looking
 *    in admin pairing table and finding a fabric that has the matching commissioner node ID as fabricId + device nodeId as nodeId and an uninitiated vendorId.
 * 3) RemoveFabric uses the passed in fabricId, nodeId, vendorID to find matching entry and remove it from admin pairing table. Once fabricIndex is implemented, it should be use that instead.
 */
