@@ -324,7 +324,8 @@ void MessageCounterManager::HandleMsgCounterSyncResp(Messaging::ExchangeContext 
     VerifyOrExit(syncCounter != 0, err = CHIP_ERROR_READ_FAILED);
 
     // Verify that the response field matches the expected Challenge field for the exchange.
-    err = state->GetSessionMessageCounter().GetPeerMessageCounter().VerifyChallenge(syncCounter, FixedByteSpan<kChallengeSize>(resp));
+    err =
+        state->GetSessionMessageCounter().GetPeerMessageCounter().VerifyChallenge(syncCounter, FixedByteSpan<kChallengeSize>(resp));
     SuccessOrExit(err);
 
     VerifyOrExit(packetHeader.GetSourceNodeId().HasValue(), err = CHIP_ERROR_INVALID_ARGUMENT);

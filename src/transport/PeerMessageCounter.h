@@ -37,16 +37,18 @@ public:
     PeerMessageCounter() : mStatus(Status::NotSynced) {}
     ~PeerMessageCounter() { Reset(); }
 
-    void Reset() {
-        switch(mStatus) {
-            case Status::NotSynced:
-                break;
-            case Status::SyncInProcess:
-                mSyncInProcess.~SyncInProcess();
-                break;
-            case Status::Synced:
-                mSynced.~Synced();
-                break;
+    void Reset()
+    {
+        switch (mStatus)
+        {
+        case Status::NotSynced:
+            break;
+        case Status::SyncInProcess:
+            mSyncInProcess.~SyncInProcess();
+            break;
+        case Status::Synced:
+            mSynced.~Synced();
+            break;
         }
         mStatus = Status::NotSynced;
     }
